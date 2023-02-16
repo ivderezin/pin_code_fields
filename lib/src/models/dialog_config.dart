@@ -28,6 +28,7 @@ class DialogConfig {
     String? dialogContent,
     String? dialogTitle,
     String? negativeText,
+    String? additionalText,
     PinCodePlatform? platform,
   }) {
     return DialogConfig._internal(
@@ -37,6 +38,7 @@ class DialogConfig {
           : dialogContent,
       dialogTitle: dialogTitle == null ? "Paste Code" : dialogTitle,
       negativeText: negativeText == null ? "Cancel" : negativeText,
+      additionalText: additionalText == null ? "?" : additionalText,
       platform: platform == null ? PinCodePlatform.other : platform,
     );
   }
