@@ -317,6 +317,7 @@ class _PinCodeTextFieldState extends State<PinCodeTextField>
           dialogTitle: widget.dialogConfig!.dialogTitle,
           negativeText: widget.dialogConfig!.negativeText,
           platform: widget.dialogConfig!.platform,
+          additionalText: widget.dialogConfig!.additionalText
         );
   PinTheme get _pinTheme => widget.pinTheme;
 
@@ -696,7 +697,7 @@ class _PinCodeTextFieldState extends State<PinCodeTextField>
                       style: widget.pastedTextStyle ?? defaultPastedTextStyle,
                     ),
                     TextSpan(
-                      text: "?",
+                      text: _dialogConfig.additionalText,
                       style: TextStyle(
                         color: Theme.of(context).textTheme.labelLarge!.color,
                       ),
@@ -722,7 +723,7 @@ class _PinCodeTextFieldState extends State<PinCodeTextField>
                       style: widget.pastedTextStyle ?? defaultPastedTextStyle,
                     ),
                     TextSpan(
-                      text: " ?",
+                      text: text: _dialogConfig.additionalText,
                       style: TextStyle(
                         color: Theme.of(context).textTheme.labelLarge!.color,
                       ),
