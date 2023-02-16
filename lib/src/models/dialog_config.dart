@@ -12,6 +12,10 @@ class DialogConfig {
 
   /// Negative action text for the [AlertDialog]. Default to "Cancel"
   final String? negativeText;
+  
+  // Additional text after code. Default to "?"
+  final String? additionalText;
+  
 
   /// The default dialog theme, should it be iOS or other(including web and Android)
   final PinCodePlatform platform;
@@ -20,6 +24,7 @@ class DialogConfig {
     this.dialogTitle,
     this.affirmativeText,
     this.negativeText,
+    this.additionalText,
     this.platform = PinCodePlatform.other,
   });
 
